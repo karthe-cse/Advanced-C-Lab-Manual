@@ -16,15 +16,55 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
 
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    switch(n) {
+        case 5:
+            printf("seventy one\n");
+            break;
+        case 6:
+            printf("seventy two\n");
+            break;
+        case 7:
+            printf("seventy three\n");
+            break;
+        case 8:
+            printf("seventy four\n");
+            break;
+        case 9:
+            printf("seventy five\n");
+            break;
+        case 10:
+            printf("seventy six\n");
+            break;
+        case 11:
+            printf("seventy seven\n");
+            break;
+        case 12:
+            printf("seventy eight\n");
+            break;
+        case 13:
+            printf("seventy nine\n");
+            break;
+        default:
+            printf("Greater than 13\n");
+    }
+
+    return 0;
+}
+```
 
 
 
 Output:
 
+<img width="728" height="227" alt="image" src="https://github.com/user-attachments/assets/0d987e66-0c08-43c4-85a3-d2a5ab317647" />
 
-//paste your output here
 
 
 
@@ -47,7 +87,31 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include<stdio.h>
+#include<string.h> 
+int main()
+{
+    char a[50]; 
+    scanf("%s",a); 
+    int l=strlen(a); char h='0';
+    for(int i=0;i<4;i++)
+    {
+        int c=0;
+        for(int j=0;j<l;j++)
+        {
+            if(a[j]==h)
+            {
+                c+=1;
+                
+            }
+            
+        }
+        printf("%d ",c); 
+        h++;
+    }
+}
+```
 
 
 
@@ -55,7 +119,8 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="1008" height="228" alt="image" src="https://github.com/user-attachments/assets/81e8f92d-98ed-47d9-8464-46e1465024d0" />
+
 
 
 
@@ -84,7 +149,45 @@ Free the memory allocated for each string in s Free the memory allocated for s
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+#include <string.h>
+int main() {
+    int n;
+    scanf("%d", &n);
+    char a[20][20];
+    for (int i = 0; i < n; i++)
+        scanf("%s", a[i]);
+    while (1) {
+        for (int i = 0; i < n; i++) {
+            printf("%s", a[i]);
+            if (i < n - 1) printf(" ");
+        }
+        printf("\n");
+        int i = n - 2;
+        while (i >= 0 && strcmp(a[i], a[i+1]) >= 0) i--;
+        if (i < 0) break; 
+        int j = n - 1;
+        while (strcmp(a[i], a[j]) >= 0) j--;
+        char temp[20];
+        strcpy(temp, a[i]);
+        strcpy(a[i], a[j]);
+        strcpy(a[j], temp);
+        int start = i + 1, end = n - 1;
+        while (start < end) {
+            strcpy(temp, a[start]);
+            strcpy(a[start], a[end]);
+            strcpy(a[end], temp);
+            start++;
+            end--;
+        }
+    }
+    return 0;
+}
+
+
+
+```
 
 
 
@@ -92,7 +195,8 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="912" height="390" alt="image" src="https://github.com/user-attachments/assets/a72df50c-eb14-4665-a24b-1281a940ba52" />
+
 
 
 
@@ -117,7 +221,35 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    int size = 2 * n - 1; 
+    
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            int top = i;
+            int left = j;
+            int right = size - 1 - j;
+            int bottom = size - 1 - i;
+            
+            int min = top;
+            if (left < min) min = left;
+            if (right < min) min = right;
+            if (bottom < min) min = bottom;
+            
+            printf("%d ", n - min);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
 
 
 
@@ -125,7 +257,8 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="800" height="705" alt="image" src="https://github.com/user-attachments/assets/77ebfa13-fa1e-49d9-b00c-d1812dbd990c" />
+
 
 
 
@@ -156,7 +289,21 @@ o	Call the square() function and display the result.
 
 Program:
 
-//type your code here
+```
+#include <stdio.h>
+void square();
+int main(){
+    
+    square();
+    return 0;
+}
+void square(){
+    int a;
+    scanf("%d",&a);
+    float ans = a*a;
+    printf("The square of %d is : %.2f",a,ans);
+}
+```
 
 
 
@@ -164,7 +311,8 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="533" height="206" alt="image" src="https://github.com/user-attachments/assets/73284a44-3ac5-4db1-9f2e-08ba9928143e" />
+
 
 
 
@@ -173,6 +321,33 @@ Output:
 
 Result:
 Thus, the program is verified successfully
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
